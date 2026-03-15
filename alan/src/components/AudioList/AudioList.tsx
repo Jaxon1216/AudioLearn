@@ -7,6 +7,8 @@ import AudioItem from './AudioItem';
 
 const categories: Category[] = ['每日跟读', '造句公式', '口语听力', '美式口音', '访谈节目', '雅思'];
 const LOCAL_AUDIOS_KEY = 'alan_local_audios';
+const DATA_VERSION_KEY = 'alan_data_version';
+const CURRENT_DATA_VERSION = '2'; // 增加版本号以强制重新加载
 
 const AudioList: React.FC = () => {
   const { user } = useAuth();
@@ -22,14 +24,20 @@ const AudioList: React.FC = () => {
     
     if (isLocalMode) {
       try {
+        const storedVersion = localStorage.getItem(DATA_VERSION_KEY);
         const storedAudios = localStorage.getItem(LOCAL_AUDIOS_KEY);
-        if (storedAudios) {
-          setAudios(JSON.parse(storedAudios));
-        } else {
+        
+        // 如果版本不匹配或没有缓存数据，重新加载
+        if (storedVersion !== CURRENT_DATA_VERSION || !storedAudios) {
           const response = await fetch('/audios/mock-data.json');
           const mockData: Audio[] = await response.json();
           localStorage.setItem(LOCAL_AUDIOS_KEY, JSON.stringify(mockData));
+          localStorage.setItem(DATA_VERSION_KEY, CURRENT_DATA_VERSION);
           setAudios(mockData);
+          console.log('✅ 已加载新数据，共', mockData.length, '个音频');
+        } else {
+          setAudios(JSON.parse(storedAudios));
+          console.log('✅ 从缓存加载数据');
         }
       } catch (error) {
         console.error('Error loading local audios:', error);
