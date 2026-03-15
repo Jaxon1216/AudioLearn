@@ -1,0 +1,13 @@
+[
+  {
+    "id": "test-1",
+    "title": "美式口音速成课程介绍",
+    "category": "美式口音",
+    "audio_url": "/audios/test.mp3",
+    "subtitle_url": "/subtitles/test.srt",
+    "duration": 0,
+    "status": null,
+    "user_id": "local-user",
+    "created_at": "2026-03-14T00:00:00Z"
+  }
+]
