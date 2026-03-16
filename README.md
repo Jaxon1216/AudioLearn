@@ -1,4 +1,4 @@
-# Alan - 音频学习应用
+# EastonJiang - 音频学习应用
 
 一个基于 React + Supabase 的音频学习应用，支持音频播放、字幕同步高亮、音频标签管理和生词列表功能。
 
@@ -26,8 +26,8 @@
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/yourusername/Alan.git
-cd Alan/alan
+git clone https://github.com/yourusername/EastonJiang.git
+cd EastonJiang/EastonJiang
 
 # 2. 安装依赖
 npm install
@@ -48,18 +48,18 @@ npm start
 4. 配置 `.env` 文件：
 
 ```bash
-cd alan
+cd EastonJiang
 cp .env.example .env
 # 编辑 .env 填入 Supabase 凭证
 ```
 
-详细配置步骤请查看 [`alan/SETUP_GUIDE.md`](alan/SETUP_GUIDE.md)
+详细配置步骤请查看 [`EastonJiang/SETUP_GUIDE.md`](EastonJiang/SETUP_GUIDE.md)
 
 ## 📁 项目结构
 
 ```
-Alan/
-├── alan/                   # React 前端应用
+EastonJiang/
+├── EastonJiang/                   # React 前端应用
 │   ├── src/
 │   │   ├── components/    # React 组件
 │   │   ├── contexts/      # Context API
@@ -120,8 +120,8 @@ cd scripts
 
 ## 📖 文档
 
-- [应用使用说明](alan/README.md) - 详细的功能说明和使用指南
-- [Supabase 配置指南](alan/SETUP_GUIDE.md) - 配置云端数据同步
+- [应用使用说明](EastonJiang/README.md) - 详细的功能说明和使用指南
+- [Supabase 配置指南](EastonJiang/SETUP_GUIDE.md) - 配置云端数据同步
 - [工具安装指南](TOOLS_SETUP_COMPLETE.md) - ffmpeg 和 Whisper 安装
 - [Whisper 安装说明](WHISPER_INSTALL.md) - 字幕生成工具配置
 
@@ -132,7 +132,7 @@ cd scripts
 1. 推送代码到 GitHub
 2. 访问 [Vercel](https://vercel.com/) 导入项目
 3. 配置：
-   - Root Directory: `alan`
+   - Root Directory: `EastonJiang`
    - Framework Preset: Create React App
 4. 添加环境变量（如果使用 Supabase）：
    - `REACT_APP_SUPABASE_URL`
@@ -170,4 +170,4 @@ MIT License
 
 ## 👨‍💻 作者
 
-Created with ❤️ by Alan Team
+Created with ❤️ by EastonJiang Team

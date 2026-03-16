@@ -3,7 +3,7 @@ import { supabase, isLocalMode } from '../lib/supabase';
 import { Vocabulary } from '../types';
 import { useAuth } from '../contexts/AuthContext';
 
-const LOCAL_VOCABULARY_KEY = 'alan_local_vocabulary';
+const LOCAL_VOCABULARY_KEY = 'EastonJiang_local_vocabulary';
 
 export const useVocabulary = () => {
   const { user } = useAuth();

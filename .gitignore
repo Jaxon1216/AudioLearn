@@ -1,31 +1,20 @@
-# Alan 音频学习应用 - 主项目 .gitignore
+# EastonJiang 音频学习应用
 
-# 原始视频文件（太大，不应提交到 git）
-raw_videos/
+# 媒体文件（使用 Supabase Storage）
+resource/
 *.mp4
 *.avi
 *.mov
 *.mkv
-
-# 处理后的音频和字幕文件（建议使用 Supabase Storage）
-# 如果要提交到 git，建议使用 Git LFS
-processed/
 *.mp3
 *.wav
 *.srt
 *.vtt
 
-# 临时文档（开发过程中的状态文档）
-CHANGELOG.md
-CURRENT_STATUS.md
-DEPLOYMENT_CHECKLIST.md
-FINAL_STATUS.md
-INSTALLATION_COMPLETE.md
-PROCESSING_STATUS.md
-PROJECT_OPTIMIZATION.md
-PROJECT_SUMMARY.md
-READY_TO_DEPLOY.md
-about.md
+# 本地模式音频文件（不提交）
+EastonJiang/public/audios/*/
+EastonJiang/public/subtitles/*/
+!EastonJiang/public/audios/mock-data.json
 
 # Python 相关
 __pycache__/
@@ -68,7 +57,7 @@ logs/
 .env.local
 .env.*.local
 
-# Node modules（在子目录 alan/ 中）
+# Node modules（在子目录 EastonJiang/ 中）
 node_modules/
 
 # 构建输出

@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { supabase, isLocalMode } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
 
-const LOCAL_PROGRESS_KEY = 'alan_local_progress';
+const LOCAL_PROGRESS_KEY = 'EastonJiang_local_progress';
 
 export const usePlaybackProgress = (
   audioId: string | null,

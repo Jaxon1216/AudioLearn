@@ -27,7 +27,7 @@ const MainPage: React.FC = () => {
         alignItems: 'center',
         boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
       }}>
-        <h2 style={{ margin: 0 }}>Alan 音频学习</h2>
+        <h2 style={{ margin: 0 }}>EastonJiang 音频学习</h2>
         <Space>
           <span>{user?.email}</span>
           <Button icon={<BookOutlined />} onClick={() => setVocabDrawerVisible(true)}>

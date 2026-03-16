@@ -42,7 +42,7 @@ const LoginPage: React.FC = () => {
       minHeight: '100vh',
       background: '#f0f2f5'
     }}>
-      <Card style={{ width: 400 }} title="Alan 音频学习">
+      <Card style={{ width: 400 }} title="EastonJiang 音频学习">
         <Tabs
           items={[
             {
