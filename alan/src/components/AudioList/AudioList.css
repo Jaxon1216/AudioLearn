@@ -1,0 +1,30 @@
+.audio-list-card {
+  height: 600px;
+}
+
+.audio-list-card .ant-card-body {
+  height: calc(100% - 57px);
+  display: flex;
+  flex-direction: column;
+}
+
+.audio-list-card .ant-tabs {
+  flex: 0 0 auto;
+}
+
+.audio-list-scrollable {
+  flex: 1;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .audio-list-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .audio-list-card {
+    height: 350px;
+  }
+}

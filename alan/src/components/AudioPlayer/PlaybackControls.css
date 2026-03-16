@@ -1,0 +1,39 @@
+.playback-controls {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.playback-speed-label {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .playback-controls {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .playback-speed-label {
+    margin-left: 0;
+    margin-right: 4px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .playback-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .playback-speed-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

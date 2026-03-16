@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Space, Select } from 'antd';
+import { Button, Select } from 'antd';
 import { PlayCircleOutlined, PauseCircleOutlined } from '@ant-design/icons';
 import { useAudioContext } from '../../contexts/AudioContext';
+import './PlaybackControls.css';
 
 const PlaybackControls: React.FC = () => {
   const { isPlaying, togglePlay, playbackRate, setPlaybackRate } = useAudioContext();
@@ -16,7 +17,7 @@ const PlaybackControls: React.FC = () => {
   ];
 
   return (
-    <Space style={{ marginBottom: '16px' }}>
+    <div className="playback-controls">
       <Button
         type="primary"
         icon={isPlaying ? <PauseCircleOutlined /> : <PlayCircleOutlined />}
@@ -25,14 +26,16 @@ const PlaybackControls: React.FC = () => {
       >
         {isPlaying ? '暂停' : '播放'}
       </Button>
-      <span style={{ marginLeft: '16px', marginRight: '8px' }}>播放速度:</span>
-      <Select
-        value={playbackRate}
-        onChange={setPlaybackRate}
-        options={playbackRates}
-        style={{ width: 100 }}
-      />
-    </Space>
+      <div className="playback-speed-control">
+        <span className="playback-speed-label">播放速度:</span>
+        <Select
+          value={playbackRate}
+          onChange={setPlaybackRate}
+          options={playbackRates}
+          style={{ width: 100 }}
+        />
+      </div>
+    </div>
   );
 };
 

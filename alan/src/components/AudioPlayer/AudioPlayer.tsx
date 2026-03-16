@@ -47,7 +47,7 @@ const AudioPlayer: React.FC = () => {
 
   if (!currentAudio) {
     return (
-      <Card style={{ margin: '16px' }}>
+      <Card style={{ margin: '0 0 12px 0' }}>
         <div style={{ textAlign: 'center', padding: '40px', color: '#999' }}>
           请选择一个音频开始播放
         </div>
@@ -56,7 +56,7 @@ const AudioPlayer: React.FC = () => {
   }
 
   return (
-    <Card title={`正在播放: ${currentAudio.title}`} style={{ margin: '16px' }}>
+    <Card title={`正在播放: ${currentAudio.title}`} style={{ margin: '0 0 12px 0' }}>
       <audio ref={audioRef} src={currentAudio.audio_url} />
       <PlaybackControls />
       <ProgressBar />

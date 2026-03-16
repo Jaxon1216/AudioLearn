@@ -4,6 +4,7 @@ import { Audio, Category } from '../../types';
 import { supabase, isLocalMode } from '../../lib/supabase';
 import { useAuth } from '../../contexts/AuthContext';
 import AudioItem from './AudioItem';
+import './AudioList.css';
 
 const categories: Category[] = ['每日跟读', '造句公式', '口语听力', '美式口音', '访谈节目', '雅思'];
 const LOCAL_AUDIOS_KEY = 'EastonJiang_local_audios';
@@ -98,13 +99,13 @@ const AudioList: React.FC = () => {
   }));
 
   return (
-    <Card title="音频列表" style={{ margin: '16px', height: '600px' }}>
+    <Card title="音频列表" style={{ margin: '0' }} className="audio-list-card">
       <Tabs
         activeKey={selectedCategory}
         onChange={(key) => setSelectedCategory(key as Category)}
         items={tabItems}
       />
-      <div style={{ height: '450px', overflowY: 'auto' }}>
+      <div className="audio-list-scrollable">
         <List
           loading={loading}
           dataSource={filteredAudios}

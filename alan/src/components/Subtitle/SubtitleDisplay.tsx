@@ -3,6 +3,7 @@ import { Card } from 'antd';
 import { useAudioContext } from '../../contexts/AudioContext';
 import { useSubtitleSync } from '../../hooks/useSubtitleSync';
 import SubtitleLine from './SubtitleLine';
+import './SubtitleDisplay.css';
 
 const SubtitleDisplay: React.FC = () => {
   const { subtitles, currentTime, currentAudio } = useAudioContext();
@@ -25,7 +26,7 @@ const SubtitleDisplay: React.FC = () => {
 
   if (!currentAudio) {
     return (
-      <Card title="字幕" style={{ margin: '16px', height: '400px' }}>
+      <Card title="字幕" style={{ margin: '0', height: '400px' }}>
         <div style={{ textAlign: 'center', padding: '40px', color: '#999' }}>
           暂无字幕
         </div>
@@ -34,14 +35,10 @@ const SubtitleDisplay: React.FC = () => {
   }
 
   return (
-    <Card title="字幕" style={{ margin: '16px' }}>
+    <Card title="字幕" style={{ margin: '0' }} className="subtitle-card">
       <div
         ref={containerRef}
-        style={{
-          height: '400px',
-          overflowY: 'auto',
-          padding: '16px',
-        }}
+        className="subtitle-container"
       >
         {subtitles.map((subtitle, index) => (
           <SubtitleLine

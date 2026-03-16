@@ -68,7 +68,7 @@ const VocabularyDrawer: React.FC<VocabularyDrawerProps> = ({ visible, onClose })
     <Drawer
       title="生词列表"
       placement="right"
-      width={400}
+      width={window.innerWidth > 768 ? 400 : '85%'}
       onClose={onClose}
       open={visible}
     >

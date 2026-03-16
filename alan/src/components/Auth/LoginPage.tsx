@@ -40,9 +40,10 @@ const LoginPage: React.FC = () => {
       justifyContent: 'center', 
       alignItems: 'center', 
       minHeight: '100vh',
-      background: '#f0f2f5'
+      background: '#f0f2f5',
+      padding: '16px'
     }}>
-      <Card style={{ width: 400 }} title="EastonJiang 音频学习">
+      <Card style={{ width: '100%', maxWidth: 400 }} title="EastonJiang 音频学习">
         <Tabs
           items={[
             {
